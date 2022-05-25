@@ -4,7 +4,9 @@
   "description": "Cypress using Cucumber with Page Objects",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:open": "cypress open",
+    "test:run": "cypress run && node ./cypress/cucumber-html-report.js",
+    "test:report": "node ./cypress/cucumber-html-report.js"
   },
   "keywords": [
     "Cypress",
@@ -24,9 +26,16 @@
   "homepage": "https://github.com/athan3350/cypress-javascript-POM#readme",
   "devDependencies": {
     "cypress": "^9.7.0",
-    "cypress-cucumber-preprocessor": "^4.3.1"
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "multiple-cucumber-html-reporter": "^1.20.0"
   },
   "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": true
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
   }
 }
