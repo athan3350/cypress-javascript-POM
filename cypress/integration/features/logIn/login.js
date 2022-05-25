@@ -2,14 +2,13 @@ import { Given, When, And, Then } from 'cypress-cucumber-preprocessor/steps'
 const loginPage = require("../../../page_objects/loginPage")
 const generalConstants = require("../../../constants/GeneralConstants")
 
-Given('{word} is a my store user', (actorName) => {
-    cy.log('actorName')
+Given('He is a my store user', () => {
     cy.visit('/')
 })
 
-When('He wants to acccess to my store platform', (loginData) => {
+When('{string} wants to acccess to my store platform', (actorName) => {
     loginPage.clickSignIn()
-    loginPage.enterCredentials(loginData)
+    loginPage.enterCredentials(actorName)
     loginPage.clickSignInLogin()
 })
 

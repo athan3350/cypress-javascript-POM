@@ -1,3 +1,4 @@
+
 class LoginPage {
 
     elements = {
@@ -8,11 +9,12 @@ class LoginPage {
         homePageLbl: () => cy.get(".info-account"),
     }
 
-    enterCredentials(credentials) {
-        credentials.hashes().forEach(row => {
-            this.elements.emailTxt().type(row.email)
-            this.elements.passwordTxt().type(row.password)
-        });
+    enterCredentials(actorName) {
+        cy.log(actorName)
+        cy.fixture('../fixtures/actors.json').then((actors) => {
+            this.elements.emailTxt().type(actors[actorName].email)
+            this.elements.passwordTxt().type(actors[actorName].password)
+        })
     }
 
     clickSignIn() {
