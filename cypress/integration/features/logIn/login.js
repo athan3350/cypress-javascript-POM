@@ -15,3 +15,7 @@ When('{string} wants to acccess to my store platform', (actorName) => {
 Then('He should see the my store platform main page', () => {
     loginPage.getHomePageLbl().should('have.text', generalConstants.HOME_PAGE_LBL_TEXT)
 })
+
+Then('He should see that He is not logged in my store platform by invalid credentials', () => {
+    loginPage.getCredentialsErrorLbl().should('to.be.visible', generalConstants.HOME_PAGE_LBL_TEXT)
+})

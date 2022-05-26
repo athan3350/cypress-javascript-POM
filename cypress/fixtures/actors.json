@@ -2,5 +2,9 @@
     "Sebastian": {
         "email": "athan3350@hotmail.com",
         "password": "sebas"
+    },
+    "Pancho": {
+        "email": "pancho@hotmail.com",
+        "password": "pancho"
     }
 }

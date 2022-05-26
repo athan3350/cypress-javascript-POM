@@ -7,6 +7,7 @@ class LoginPage {
         emailTxt: () => cy.get("#email"),
         logInBtn: () => cy.get("#login_form .submit span"),
         homePageLbl: () => cy.get(".info-account"),
+        credentialsErrorLbl: () => cy.get("div#center_column > .alert.alert-danger")
     }
 
     enterCredentials(actorName) {
@@ -27,6 +28,10 @@ class LoginPage {
 
     getHomePageLbl() {
         return this.elements.homePageLbl()
+    }
+
+    getCredentialsErrorLbl() {
+        return this.elements.credentialsErrorLbl()
     }
 }
 
