@@ -134,3 +134,4 @@ package-lock.json
 cypress/reports
 cypress/videos
 cypress/cucumber-json
+cypress/screenshots

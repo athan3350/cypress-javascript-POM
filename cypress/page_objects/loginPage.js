@@ -11,28 +11,19 @@ class LoginPage {
     }
 
     enterCredentials(actorName) {
-        cy.log(actorName)
         cy.fixture('../fixtures/actors.json').then((actors) => {
             this.elements.emailTxt().type(actors[actorName].email)
             this.elements.passwordTxt().type(actors[actorName].password)
         })
     }
 
-    clickSignIn() {
-        this.elements.signInBtn().click()
-    }
+    clickSignIn() { this.elements.signInBtn().click() }
 
-    clickSignInLogin() {
-        this.elements.logInBtn().click()
-    }
+    clickSignInLogin() { this.elements.logInBtn().click() }
 
-    getHomePageLbl() {
-        return this.elements.homePageLbl()
-    }
+    getHomePageLbl() { return this.elements.homePageLbl() }
 
-    getCredentialsErrorLbl() {
-        return this.elements.credentialsErrorLbl()
-    }
+    getCredentialsErrorLbl() { return this.elements.credentialsErrorLbl() }
 }
 
 module.exports = new LoginPage();
