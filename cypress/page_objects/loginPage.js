@@ -21,7 +21,7 @@ class LoginPage {
 
     clickSignInLogin() { this.elements.logInBtn().click() }
 
-    getHomePageLbl() { return this.elemAents.homePageLbl() }
+    getHomePageLbl() { return this.elements.homePageLbl() }
 
     getCredentialsErrorLbl() { return this.elements.credentialsErrorLbl() }
 }
