@@ -15,3 +15,7 @@ When('{string} wants create a new ticket in the contact us module', (actorName, 
 Then('He should see his suggestions or questions had been sent', () => {
     ContactUsPage.getAlertSuccessLbl().should('to.be.visible').and('have.text', generalConstants.TICKET_SENT_SUCCESSFUL)
 })
+
+Then('He should see his suggestions or questions had not been sent with the {string}', (errorMessage) => {
+    ContactUsPage.getAlertErrorLbl().should('to.be.visible').and('have.text', errorMessage)
+})
