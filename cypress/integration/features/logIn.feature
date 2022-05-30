@@ -12,7 +12,7 @@ Feature: Login to my store platform
 
     Examples: 
       | actorName   |
-      | "Sebastian" |
+      | 'Sebastian' |
 
   @LoginUnSuccessful
   Scenario Outline: Validate to try to login to my store platform with invalid credentials
@@ -22,4 +22,4 @@ Feature: Login to my store platform
 
     Examples: 
       | actorName |
-      | "Pancho"  |
+      | 'Pancho'  |
