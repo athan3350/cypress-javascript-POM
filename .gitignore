@@ -129,3 +129,9 @@ dist
 .yarn/install-state.gz
 .pnp.*
 package-lock.json
+
+#reports
+cypress/reports
+cypress/videos
+cypress/cucumber-json
+cypress/screenshots
